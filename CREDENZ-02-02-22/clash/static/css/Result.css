@@ -355,7 +355,7 @@ border-radius: 10px;
 .award-ribbontwo:after {
   top: 30px;
   left: 25px;
-  border-color: transparent#bdc3c7 transparent #bdc3c7;
+  border-color: transparent #bdc3c7 transparent #bdc3c7;
   border-width: 0px 50px 30px;
   border-style: solid;
 }

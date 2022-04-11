@@ -107,8 +107,9 @@
                             {% for sub in save%}
                             <li class="nav-item">
                                 <a class="nav-link   nav-link-1" style="color: white;" aria-current="page" href="./{{sub}}"
-                                    role="tab" data-toggle="tab" id="qno1">Problem {{forloop.counter}}</a>
+                                    role="tab" data-toggle="tab" id=qno{{forloop.counter}}>Problem {{forloop.counter}}</a>
                             </li>
+
                             {%endfor%}
                             <!-- <li class="nav-item">
                                 <a class="nav-link nav-link-1" style="color: white;" href="./2" role="tab"
@@ -140,7 +141,7 @@
                             <div role="tabpanel" class="tab-pane fade in active" id="prob1">1</div>
                             <div role="tabpanel" class="tab-pane fade" id="prob2">2</div>
                             <div role="tabpanel" class="tab-pane fade" id="prob3">3</div>
-                            <div role="tabpanel" class="tab-pane fade" id="prob4">4</div>
+                            <div role="tabpanel" class="tab-pane fade" id="prob4">4 </div>
                         </div>
                         <div class="scrollable">
                         <table style="text-align: center;" class="table table-striped rside table-1" id="table001">
@@ -154,6 +155,9 @@
                             </thead>
                             <tbody>
                                 <h1 id="laste" style="display:none">{{data|length}}</h1>
+                                {% if bool == True %}
+                                <tr><h3>No Submissions made yet</h3></tr>   
+                                {%endif%}
                             {% for sub in data %}
                             <tr>
                                     <th class="main-table main-table-1" scope="row">{{forloop.counter}}</th>
@@ -204,7 +208,7 @@
                                         </div>
                                     </td>
                                 </tr>
-                        {% endfor %}                                   
+                        {% endfor %}                        
                             </tbody>
                         </table></div>
                     </div>
@@ -384,6 +388,17 @@
 
 
     <script>
+        //tab highlight
+            $(document).ready(function() {
+                let myaq=document.querySelector("#qno").textContent;
+                console.log(myaq);
+                var qids=["#qno1","#qno2","#qno3","#qno4","#qno5","#qno6"];
+                document.querySelector(qids[myaq-1]).classList.add('active');
+                
+            });
+
+
+
         document.onload=f1();
         function f1(){
         let a=Number(document.getElementById('laste').innerHTML);
@@ -414,15 +429,15 @@
             
             }
         }
-        
-        
-        let qs=document.getElementById('qno').innerHTML;
+        //let qs=document.getElementById('qno').innerHTML;
         // console.log(qs);
-        document.getElementById(`qno${qs}`).classList.add("nav-item-1");
+        // document.getElementById(`qno${qs}`).classList.add("nav-item-1");
     }
     </script>
 
 <script>
+//tablets   
+
     //Timer
     (function () {
     const second = 1000,
@@ -456,4 +471,5 @@
         }, 0)
     }());
 </script>
+<script src="https://kit.fontawesome.com/a2d549fb45.js" crossorigin="anonymous"></script>
 </html>

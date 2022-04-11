@@ -16,6 +16,10 @@ html {
       height: 530px;
       overflow-y: scroll;
   }
+  
+  .activeques{
+    border-bottom: 2px solid white;
+  }
 
   #ssrrnnood{
     display: none;

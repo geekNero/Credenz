@@ -167,7 +167,8 @@ def mysubmission(request, pk):
     for i in range(1,7):
         sub_counter.append(k+i)
     tester= Player.objects.get(user=request.user)
-    return render(request, "mysub.html", {"data": l1,"ac":ac,"rte":rte,"wa":wa,"tle":tle,"cte":cte,"mle":mle,"pk":pk,"time":newtime,"save":sub_counter,"junior":tester.junior})
+    is_empty=(len(l1)==0)
+    return render(request, "mysub.html", {"data": l1,"ac":ac,"rte":rte,"wa":wa,"tle":tle,"cte":cte,"mle":mle,"pk":pk,"time":newtime,"bool":is_empty,"save":sub_counter,"junior":tester.junior})
 
 
 def get_upload_path(instance):
