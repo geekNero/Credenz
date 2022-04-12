@@ -55,6 +55,41 @@
                             <a class="nav-link active navvi" aria-current="page" href="{% url 'clash-contest' %}"
                                 style="margin-left: 10px;margin-right: 10px;">Question Hub</a>
                         </li>
+                        <!-- niche wali lines add karo -->
+                        <li class="nav-item">
+                            <a class="nav-link navvi" style="margin-left: 10px;margin-right: 10px;cursor:default;" data-bs-toggle="modal" data-bs-target="#iModal">Instructions</a>
+                
+                                <!-- <button type="button" class="btn btn-primary">
+                                    Launch demo modal
+                                </button> -->
+                                
+                                <!-- Modal -->
+                                <div class="modal fade" id="iModal" tabindex="-1" aria-labelledby="LogoutModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="LogoutModalLabel">Instructions!</h5>
+                                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body" style="text-align: left;">
+                                          <ol>
+                                            <li>
+                                              This round comprises of 6 questions. All questions have marketing scheme +100 for right answer.
+                                            </li>
+                                            <li>
+                                              Please play the game in full screen (Fn+F11) for better resolution.
+                                            </li>
+                                          </ol>
+                                          
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <!-- <button type="button" class="btn btn-danger">Logout</button> -->
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                        </li>
 
                         <li class="nav-item">
                             <a class="nav-link navvi" aria-current="page" href="{% url 'clash-leaderboard' %}"
@@ -106,7 +141,7 @@
                         <ul class="nav-1 nav nav-pills justify-content-between ">
                             {% for sub in save%}
                             <li class="nav-item">
-                                <a class="nav-link   nav-link-1" style="color: white;" aria-current="page" href="./{{sub}}"
+                                <a class="nav-link nav-link-1" style="color: white;" aria-current="page" href="./{{sub}}"
                                     role="tab" data-toggle="tab" id=qno{{forloop.counter}}>Problem {{forloop.counter}}</a>
                             </li>
 
@@ -154,9 +189,12 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <!-- niche wali lines change karo -->
                                 <h1 id="laste" style="display:none">{{data|length}}</h1>
                                 {% if bool == True %}
-                                <tr><h3>No Submissions made yet</h3></tr>   
+                                <tr>
+                                    <td colspan="4"><h4 class="text-white">No Submissions made yet</h4></td>
+                                </tr>   
                                 {%endif%}
                             {% for sub in data %}
                             <tr>
@@ -393,7 +431,8 @@
                 let myaq=document.querySelector("#qno").textContent;
                 console.log(myaq);
                 var qids=["#qno1","#qno2","#qno3","#qno4","#qno5","#qno6"];
-                document.querySelector(qids[myaq-1]).classList.add('active');
+                //niche wali line change kar
+                document.querySelector(qids[myaq-1]).classList.add('active','activess');
                 
             });
 

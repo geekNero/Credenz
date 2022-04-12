@@ -1,6 +1,6 @@
 import subprocess
 from clash.models import *
-import resource
+# import resource
 import os
 import re
 
@@ -9,11 +9,11 @@ def set_limit_resource(language):
     time_limit = 1
     memory_limit = 104000000
 
-    def setlimits():
-        resource.setrlimit(resource.RLIMIT_CPU, (time_limit, time_limit))
-        resource.setrlimit(resource.RLIMIT_AS, (memory_limit, memory_limit))
+    # def setlimits():
+    #     resource.setrlimit(resource.RLIMIT_CPU, (time_limit, time_limit))
+    #     resource.setrlimit(resource.RLIMIT_AS, (memory_limit, memory_limit))
 
-    return setlimits
+    return 5
 
 
 def comment_remover(code):

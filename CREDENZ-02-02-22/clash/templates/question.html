@@ -105,9 +105,9 @@
                       <div class="modal-content">
                           <div class="modal-header">
                           <h5 class="modal-title" id="LogoutModalLabel">Instructions!</h5>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
-                          <div class="modal-body text-center " style="text-align: left;">
+                          <div class="modal-body" style="text-align: left;">
                             <ol>
                               <li>
                                 This round comprises of 6 questions. All questions have marketing scheme +100 for right answer.
@@ -218,47 +218,46 @@
     </div>
   </div>
   {% endif %}
-        <div class="lcontmain">
-          <div  name="questionarea" id="questionarea" rows="10" readonly >
+  <!-- niche wali lines add karo -->
+        <div class="lcontmain" id="questionarea">
+          <div name="questionarea"  rows="10" readonly >
             <div class="myscroll">
-              <div>{{ques.title}} <br><br><br><br><br><br><br></div>
-            <div></div>zzzzzz
-            </div>
+              <h3><u>{{ques.title}}</u></h3>
             
-            
+                <p>{{ques.body}}</p> <br>
+                  
+                <h4>Input Format:</h4>
+                  
+                <p>{{ques.input_format}}</p> <br>
+                        
+                <h4>Constraints:</h4>
+    
+                <p>{{ques.constraints}}</p><br>
+                          
+                <h4>Output Format:</h4>
+    
+                <p>{{ques.output_format}}</p><br>
+    
+                <h4>Sample Input:</h4>
+    
+                <p>{{ques.sample_input}}</p><br>
+                            
+                <h4>Sample Output:</h4>
+    
+                <p>{{ques.sample_output}}</p><br>
+    
+                <h4>Explaination:</h4> 
+                <p>{{ques.explaintaion}}</p>
+            </div> 
 
-  {{ques.body}}
-  
-Input Format: 
-  
-{{ques.input_format}}
-        
-Constraints: 
-
-{{ques.constraints}}
-          
-Output Format:
-
-{{ques.output_format}}
-
-Sample Input:
-
-{{ques.sample_input}}
-            
-Sample Output: 
-
-{{ques.sample_output}}
-
-  Explaintaion:
-  {{ques.explaintaion}}
           </div>
         </div>
       </div>
         {%if junior == True%}
-        <h3 style="display:none" id="aques">{{ques.id}}</h3>
+         <h3 style="display:none" id="aques">{{ques.id}}</h3>
         {%else%}
-        <h3 style="display:none" id="aques">{{ques.id|add:-2}}</h3>
-      {%endif%}
+          <h3 style="display:none" id="aques">{{ques.id|add:-2}}</h3>
+        {%endif%}
         <div class="rcont">
         <!-- <form action="" method="post"> -->
           <form action="{%url 'clash-sub' ques.id%}" method='post' id="qpgform">

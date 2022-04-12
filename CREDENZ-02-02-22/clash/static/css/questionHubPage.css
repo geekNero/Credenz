@@ -15,7 +15,7 @@ body {
 
 .container1 {
   height: calc(100vh-120px);
-  overflow-y: auto;
+  overflow-y: hidden;
   width: 100vw;
   /* position: relative;
   align-items: center;
@@ -27,7 +27,7 @@ body {
 .mycontainer {
   /* height: calc(100vh-120px);   */
   width: 100vw;
-  margin: 2.5vh auto;
+  margin: 3vh auto;
   /* padding: 3vh 5vw; */
   /* display: flex;
   justify-content: center;
