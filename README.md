@@ -1,9 +1,9 @@
 # Credenz
-This is a website built in Django for round 2 of an event called **"Reverse Coding"** from the annual tech fest of PISB called Credenz. 
+This is a website built in Django for round 2 of an event called **"Reverse Coding"** for the annual tech fest of PISB called Credenz. 
 
 The event has the following format:
 
-    i) Participant is given a set of questions according to the criteria wether he or she is a junior or senior. 
+    i) Participant is given a set of questions according to the criteria whether he or she is a junior or senior. 
     
     ii) Each question has an input box and an output box. The participant has to provide a single input based on the instructions given just above these boxes and press run.
        
@@ -15,7 +15,7 @@ The event has the following format:
     
     v) The participant can view the leaderboard which is updated after every submission. 
     
-To setup the website first clone this branch on your local linux device and then create a enviornment and follow the following commands on your terminal:
+To setup the website first clone this branch on your local linux device and then create a environment and follow the following commands on your terminal:
 - source [environment name]/bin/activate
 - pip3 install -r requirements.txt
 After the requirements have been setup, run the following commands on your terminal:
